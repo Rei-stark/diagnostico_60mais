@@ -1,10 +1,9 @@
 """
 MaisVida Preditivo 🩺
 Triagem Inteligente de Comorbidades em Idosos
-Sprint 1: Interface Streamlit para Predição de Risco
+Interface Streamlit para Predição de Risco
 
 Autor: Reinaldo Ríchardi Oliveira Galvão
-Orientador: Marcos Prochnow
 Data: Julho de 2026
 """
 
@@ -18,14 +17,14 @@ from pathlib import Path
 
 # Configuração da página
 st.set_page_config(
-    page_title="MaisVida Preditivo",
+    page_title="Projeto MaisVida Preditivo",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Título e descrição
-st.title("🧠 MaisVida Preditivo")
+st.title("🧠 Projeto MaisVida Preditivo")
 st.subheader("Inteligência Artificial Aplicada ao Diagnóstico Situacional do Idoso")
 
 # Informações do projeto
