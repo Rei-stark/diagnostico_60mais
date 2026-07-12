@@ -1,0 +1,64 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (if sensitive)
+# data/*.xlsx
+# data/*.csv
+
+# Streamlit
+.streamlit/
+*.streamlit.logger
+
+# Temporary files
+*.tmp
+*.log
+*.pot
+
+# Environment variables
+.env
+.env.local
+
+# Generated files
+dist_idade.png
+matriz_correlacao.png
+dist_targets.png
