@@ -25,7 +25,7 @@ st.set_page_config(
 )
 
 # Título e descrição
-st.title("� Fapam MaisVida Preditivo")
+st.title("🧠 Fapam MaisVida Preditivo")
 st.subheader("Inteligência Artificial Aplicada ao Diagnóstico Situacional do Idoso")
 
 # Informações do projeto
