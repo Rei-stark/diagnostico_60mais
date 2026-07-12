@@ -1,5 +1,5 @@
 """
-Fapam MaisVida Preditivo 🩺
+MaisVida Preditivo 🩺
 Triagem Inteligente de Comorbidades em Idosos
 Sprint 1: Interface Streamlit para Predição de Risco
 
@@ -18,14 +18,14 @@ from pathlib import Path
 
 # Configuração da página
 st.set_page_config(
-    page_title="Fapam MaisVida Preditivo",
+    page_title="MaisVida Preditivo",
     page_icon="🩺",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Título e descrição
-st.title("🧠 Fapam MaisVida Preditivo")
+st.title("🧠 MaisVida Preditivo")
 st.subheader("Inteligência Artificial Aplicada ao Diagnóstico Situacional do Idoso")
 
 # Informações do projeto
@@ -368,7 +368,7 @@ with tab3:
     - **Sempre consulte um médico para confirmação diagnóstica**
     
     ### 🔗 Referências
-    - Base de dados: "Dados Completos - Fapam Pesquisa.xlsx"
+    - Base de dados: "Dados Completos - Pesquisa.xlsx"
     - Framework: [Streamlit](https://streamlit.io/)
     - Modelos: [scikit-learn](https://scikit-learn.org/)
     - Repositório: [GitHub - diagnostico_60mais](https://github.com/Rei-stark/diagnostico_60mais)
