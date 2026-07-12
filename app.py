@@ -25,15 +25,30 @@ st.set_page_config(
 )
 
 # Título e descrição
-st.title("🩺 Fapam MaisVida Preditivo")
-st.subheader("Triagem Inteligente de Comorbidades em Idosos")
+st.title("� Fapam MaisVida Preditivo")
+st.subheader("Inteligência Artificial Aplicada ao Diagnóstico Situacional do Idoso")
+
+# Informações do projeto
 st.markdown("""
 **Pós-Graduação em Data Science e Machine Learning - XP Educação**
-- Objetivo: Classificar probabilidade de risco clínico de diabetes e hipertensão na população idosa
-- Auxílio no rastreio precoce e embasamento de políticas públicas proativas
+
+- **Autor:** Reinaldo Ríchardi Oliveira Galvão
+- **Local e Data:** Pará de Minas - MG | Julho de 2026
 """)
 
 st.divider()
+
+st.markdown("""
+### 🎯 Objetivo do Projeto
+Classificar a probabilidade de risco clínico de **diabetes e hipertensão** na população idosa, 
+auxiliando no rastreio precoce e embasando a formulação de políticas públicas proativas.
+
+### 📝 Como Usar
+1. **Preencha os dados do paciente** na barra lateral esquerda
+2. **Clique em "Calcular Probabilidade de Risco"**
+3. **Visualize os resultados** com interpretação e recomendações clínicas
+4. **Explore os dados** na aba "Análise de Dados"
+""")
 
 # Função de mapeamento de categorias (mesmo usado no treinamento)
 def map_sexo(sexo_str):
@@ -289,26 +304,40 @@ with tab3:
     
     st.markdown("""
     ### 🎯 Objetivo do Projeto
-    Desenvolver um protótipo funcional de Machine Learning treinado com a base de dados municipal 
-    para **classificar a probabilidade de risco clínico de diabetes e hipertensão** na população idosa, 
+    Desenvolver um protótipo funcional de Machine Learning treinado com a base de dados municipal para 
+    **classificar a probabilidade de risco clínico de diabetes e hipertensão** na população idosa, 
     auxiliando no rastreio precoce e embasando a formulação de políticas públicas proativas.
+    
+    ### 💻 Escopo do Projeto
+    O desenvolvimento segue metodologia ágil com múltiplas sprints:
+    
+    **Sprint 1 - Preparação e Exploração de Dados** ✅
+    - Ingestão de Dados: Carregamento do dataset bruto a partir dos registros do "Diagnóstico Situacional"
+    - Data Cleaning: Identificação e tratamento de valores nulos (missing values) e inconsistências
+    - Feature Engineering: Transformação de variáveis categóricas e padronização com base no Dicionário de Dados
+    - Análise Exploratória (EDA): Avaliação do balanceamento dos targets e correlações estatísticas
+    
+    **Sprint 2 - Machine Learning**
+    - Modelagem e seleção de algoritmos (Logistic Regression, Random Forest)
+    - Otimização de hiperparâmetros com GridSearchCV
+    - Validação cruzada e métricas de desempenho
+    - Feature importance e interpretabilidade
+    
+    **Sprint 3 - Aplicação, Deploy e Documentação**
+    - Interface Streamlit para predição
+    - Deploy em Streamlit Community Cloud
+    - Documentação completa e guias de uso
     
     ### 👤 Autoria
     - **Autor:** Reinaldo Ríchardi Oliveira Galvão
-    - **Orientador:** Marcos Prochnow
     - **Instituição:** XP Educação - Pós-Graduação em Data Science e Machine Learning
     - **Local:** Pará de Minas - MG
     - **Data:** Julho de 2026
     
-    ### 📋 Sprint 1: Preparação e Exploração de Dados
-    Etapas executadas neste sprint:
-    1. **Ingestão de Dados:** Carregamento do dataset bruto a partir dos registros do "Diagnóstico Situacional"
-    2. **Data Cleaning:** Identificação e tratamento de valores nulos e inconsistências
-    3. **Feature Engineering:** Transformação de variáveis categóricas e padronização
-    4. **Análise Exploratória (EDA):** Avaliação do balanceamento dos targets e correlações
-    
     ### 📊 Dataset
     - **Total de Registros:** 300 pacientes idosos
+    - **Idade Média:** 73.8 anos (mín: 24, máx: 100)
+    - **Composição:** 100% feminino
     - **Variáveis Independentes (Features):** 5
       - Idade
       - Sexo Biológico
@@ -316,29 +345,37 @@ with tab3:
       - Atividade Física
       - Uso de Tabaco
     - **Variáveis Dependentes (Targets):** 2
-      - Diagnóstico de Diabetes
-      - Diagnóstico de Hipertensão
+      - Diagnóstico de Diabetes (40% positivos)
+      - Diagnóstico de Hipertensão (76% positivos)
     
-    ### 🤖 Modelos Treinados
-    - Random Forest Classifier (com GridSearchCV para otimização de hiperparâmetros)
-    - Logistic Regression (baseline)
+    ### 🤖 Modelos Implementados
+    - **Logistic Regression (Baseline)** - Para comparação de desempenho
+    - **Random Forest Classifier (Otimizado)** - Com GridSearchCV para otimização de hiperparâmetros
+    - Foco em **Recall** (sensibilidade) para minimizar falsos negativos em contexto clínico
+    
+    ### 📚 Stack Tecnológico
+    - **Python 3.13** - Linguagem de programação
+    - **Pandas & NumPy** - Manipulação de dados
+    - **Scikit-learn** - Machine Learning
+    - **Matplotlib & Seaborn** - Visualizações
+    - **Streamlit** - Interface web interativa
+    - **GitHub** - Controle de versão
     
     ### ⚠️ Limitações e Considerações
     - Este é um **protótipo educacional** para fins acadêmicos
-    - Os scores de risco são calculados com base em heurísticas simplificadas
+    - Os scores de risco utilizam heurísticas simplificadas
     - Recomenda-se validação clínica antes do uso em ambiente produção
-    - Sempre consulte um médico para confirmação diagnóstica
+    - **Sempre consulte um médico para confirmação diagnóstica**
     
     ### 🔗 Referências
     - Base de dados: "Dados Completos - Fapam Pesquisa.xlsx"
-    - Framework: Streamlit (interface web)
-    - Modelos: scikit-learn
-    """)
+    - Framework: [Streamlit](https://streamlit.io/)
+    - Modelos: [scikit-learn](https://scikit-learn.org/)
+    - Repositório: [GitHub - diagnostico_60mais](https://github.com/Rei-stark/diagnostico_60mais)
     
-    st.divider()
+    ---
     
-    st.info("""
-    **Disclaimer:** Esta aplicação foi desenvolvida para fins educacionais. 
-    Os resultados são estimativas baseadas em modelos de machine learning e não substituem 
-    avaliação clínica profissional. Sempre consulte um profissional de saúde qualificado.
+    **Disclaimer:** Esta aplicação foi desenvolvida para fins educacionais. Os resultados são estimativas 
+    baseadas em modelos de machine learning e **não substituem avaliação clínica profissional**. 
+    Sempre consulte um profissional de saúde qualificado.
     """)
